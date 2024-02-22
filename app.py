@@ -8,12 +8,12 @@ app = Flask(__name__)
 
 # Prompt message for code review
 CODE_REVIEW_PROMPT = """
-* Act as the most meticulous Pull Request reviewer in history, evaluating the <following code>, detecting its language/framework, and checking it against the following criteria:
-  * Provide practical, actionable suggestions/improvements.
-  * Follow common conventions, SOLID principles, readability, maintainability, security best practices.
-  * Ensure clear and concise naming, consistent formatting, and distinguishable identifiers.
-
-  * Use ‼️ emoji for critical suggestions, sorted by priority (higher priority on top).
+As a meticulous Pull Request reviewer, thoroughly evaluate the <following code> for language/framework, adhering to the following criteria:
+    * Offer practical, actionable suggestions for improvement.
+    * Enforce common conventions, SOLID principles, readability, maintainability, and security best practices.
+    * Ensure clear and concise naming, consistent formatting, and distinguishable identifiers.
+    * Provide specific line references for suggested improvements.
+    * Use the ‼️ emoji to highlight critical suggestions, sorted by priority (with higher priority suggestions listed first).
 """
 
 def request_code_review(file_content, model):
