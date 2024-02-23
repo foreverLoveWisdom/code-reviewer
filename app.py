@@ -25,7 +25,7 @@ def request_code_review(file_content, model):
         {"role": "user", "content": f"Code review the following file: {file_content}"},
     ]
     response = client.chat.completions.create(model=model,
-    messages=messages)
+    messages=messages, temperature=0.3)
     return response.choices[0].message.content
 
 def start_code_review():
