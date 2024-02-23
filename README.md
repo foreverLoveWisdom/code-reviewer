@@ -8,14 +8,6 @@
 3. Run the Flask app: `flask run`
 4. You must extract the git diff and write it to a file. Currently, this file name is hardcoded to `test.txt`. There is a sample file in the root
 
-- 🚀 How to use:
-
-1. Navigate to the home page.
-2. Input the code you want to review.
-3. Submit the code for review.
-4. Receive detailed feedback on SOLID principles, readability, maintainability, security, and best practices.
-5. Use the actionable suggestions to improve your code.
-
 - ℹ️ Note:
   - This application is intended for educational and training purposes. It provides insights and suggestions but does not replace human code review.
   - This is a paid API. To use this application, you must sign up for an API key at [OPENAI](https://platform.openai.com/overview).
