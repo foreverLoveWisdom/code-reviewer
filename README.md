@@ -5,7 +5,7 @@
 
 1. Install dependencies: `pip3 install -r requirements.txt`
 2. Set up your OpenAI API key by creating a `.env` file in the root directory and adding your API key: `OPENAI_API_KEY=your_api_key_here`
-3. Run the Flask app: `pythonp3 -m flask run`
+3. Run the Flask app: `python3 -m flask run`
 4. You must extract the git diff and write it to a file. Currently, this file name is hardcoded to `test.txt` -> Can improve later
 
 - ℹ️ Note:
