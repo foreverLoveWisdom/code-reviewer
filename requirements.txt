@@ -9,9 +9,3 @@ markdown2>=2.4.12, <2.5.0
 
 # Python-dotenv reads key-value pairs from a .env file and can set them as environment variables.
 python-dotenv>=1.0.1, <1.1.0
-
-
-
-
-
-
