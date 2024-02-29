@@ -11,16 +11,15 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 # Prompt message for code review
 CODE_REVIEW_PROMPT = """
 As a meticulous Pull Request reviewer, thoroughly evaluate the <following code> for language/framework, adhering to the following criteria:
-    * Offer practical, actionable suggestions for improvement.
-    * Enforce common conventions, SOLID principles, readability, maintainability, and security best practices.
+    * Use the ‼️ emoji to highlight critical suggestions, sorted by priority (with higher priority suggestions listed first).
+    * Focus on maintainability, readability, simplicity, adaptability to new business requirements change
     * Naming:
         * Understandabiliy: Should describe the concept it designs
         * Conciseness: Should use only the words necessary to describe the concept it represents
         * Consistency: Should be used and formatted uniformly
         * Distinguishability: Should be visually and phonetically distinct from other names used within its scope
-    * Provide specific line references for suggested improvements.
+    * Provide before and after examples if possible
     * Explain your thought process step by step calmly
-    * Use the ‼️ emoji to highlight critical suggestions, sorted by priority (with higher priority suggestions listed first).
 """
 
 def request_code_review(file_content, model):
