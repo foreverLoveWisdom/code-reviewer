@@ -1,5 +1,7 @@
 from flask import Flask, render_template
 from openai import OpenAI
+import langchain
+from langchain .text_splitter import RecursiveCharacterTextSplitter
 
 import markdown2
 from dotenv import load_dotenv
