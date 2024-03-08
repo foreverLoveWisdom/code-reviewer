@@ -8,9 +8,6 @@ import pretty_errors
 
 app = Flask(__name__)
 
-client = Anthropic(
-    api_key=os.getenv("ANTHROPIC_API_KEY"),
-)
 
 # Prompt message for code review
 CODE_REVIEW_PROMPT = """
@@ -30,6 +27,9 @@ As a meticulous Pull Request reviewer, thoroughly evaluate the <following code> 
 
 def request_code_review(file_content, model):
     """Request code review using OpenAI GPT-3 model."""
+    client = Anthropic(
+        api_key=os.getenv("ANTHROPIC_API_KEY"),
+    )
     response = client.messages.create(
         max_tokens=4096,
         temperature=0.0,
