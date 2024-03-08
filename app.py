@@ -11,8 +11,10 @@ app = Flask(__name__)
 
 # Prompt message for code review
 CODE_REVIEW_PROMPT = """
-As a meticulous Pull Request reviewer, thoroughly evaluate the <following code> for language/framework, adhering to the following criteria:
-    * Focus on maintainability, readability, simplicity, adaptability to new business requirements change
+As a holistic Pull Request reviewer, thoroughly evaluate the <following code>, adhering to the following criteria:
+    * First try to guess the programming language/framework and the high level purpose of the code
+    * Then, validate its against the best practices/conventions and standards of the language/framework
+    * Focus on maintainability, readability, simplicity, adaptability
     * Naming:
         * Understandabiliy: Should describe the concept it designs
         * Conciseness: Should use only the words necessary to describe the concept it represents
@@ -21,6 +23,8 @@ As a meticulous Pull Request reviewer, thoroughly evaluate the <following code> 
     * Before answering the question, please think about it step-by-step within <thinking></thinking> tags.
     * Then, provide your final answer within <answer></answer> tags.
     * Prioritize your suggestions from most important to least important, top to bottom.
+    * Rank the whole this whole PR from 1 to 5, 1 being the worst and 5 based on the given criteria.
+    * Mention and which step needs human intervention.
     * Finally, keep these concise and to the point, avoiding unnecessary verbosity for non-native English speakers.
 """
 
