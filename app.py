@@ -1,10 +1,11 @@
 import os
 import pprint
+
 import markdown2
+import pretty_errors
+from anthropic import Anthropic
 from dotenv import load_dotenv
 from flask import Flask, render_template
-from anthropic import Anthropic
-import pretty_errors
 
 app = Flask(__name__)
 
@@ -30,7 +31,6 @@ As a holistic Pull Request reviewer, thoroughly evaluate the <following code>, a
 
 
 def request_code_review(file_content, model):
-    """Request code review using OpenAI GPT-3 model."""
     client = Anthropic(
         api_key=os.getenv("ANTHROPIC_API_KEY"),
     )
