@@ -25,7 +25,8 @@ As a holistic Pull Request reviewer, thoroughly evaluate the <following code>, a
     * Then, provide your final answer within <answer></answer> tags.
     * Prioritize your suggestions from most important to least important, top to bottom.
     * Rank the whole this whole PR from 1 to 5, 1 being the worst and 5 based on the given criteria.
-    * Mention and which step needs human intervention.
+    * Your suggestions should be actionable, specific, with clear examples, and explicitly state the trade-offs for each of them, and then pick the one that is align with the previous goals
+    * Mention which step needs human intervention.
     * Finally, keep these concise and to the point, avoiding unnecessary verbosity for non-native English speakers.
 """
 
@@ -56,7 +57,7 @@ def start_code_review():
     # Legacy model is more expensive
     # Currently the Haiku model is the fastest and cheapest, but not released
     # yet
-    model = os.getenv("CLAUDE_MODEL") or "claude-3-sonnet-20240229"
+    model = os.getenv("CLAUDE_MODEL") or "claude-3-haiku-20240307"
     filename = os.getenv("FILENAME") or "test.txt"
     with open(filename, "r") as file:
         file_content = file.read()
